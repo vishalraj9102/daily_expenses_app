@@ -74,9 +74,13 @@ Ensure you have the following installed:
 
 ---
 
-## 🗄 Database Setup
+Here’s the updated **Database Setup** section with the addition of the `flask db migrate` command.
 
-1. **Create the PostgreSQL Database:**
+---
+
+## 🛠️ Database Setup
+
+1. **Create PostgreSQL Database:**
 
    Open your PostgreSQL shell and create the database:
 
@@ -84,15 +88,33 @@ Ensure you have the following installed:
    CREATE DATABASE convin;
    ```
 
-2. **Apply migrations:**
+2. **Initialize migrations:**
 
-   Run the following command to set up your database schema:
+   Run the following command to initialize database migrations:
+
+   ```bash
+   flask db init
+   ```
+
+3. **Generate migration script:**
+
+   After setting up your models, create a migration script:
+
+   ```bash
+   flask db migrate
+   ```
+
+4. **Apply migrations:**
+
+   Run the following command to apply the migration and set up your database schema:
 
    ```bash
    flask db upgrade
    ```
 
 ---
+
+This guide now covers the entire migration process for setting up the database using **PostgreSQL**. Let me know if you'd like further adjustments!
 
 ## 🚀 Running the Application
 
@@ -108,18 +130,30 @@ Ensure you have the following installed:
 
 ## 🔗 API Endpoints
 
+Here's the updated **API Endpoints** section in your `README.md`, incorporating both **User** and **Expense** APIs.
+
+---
+
+## 🔗 API Endpoints
+
 ### 🧑‍💻 User Endpoints
 
 | Endpoint                  | Method | Description            | Request Body                                              |
 |---------------------------|--------|------------------------|------------------------------------------------------------|
-| `/user`                   | POST   | Register a new user     | `{ "name": "Test User", "email": "test@example.com", "password": "1234" }` |
+| `/user`                   | POST   | Register a new user     | `{ "name": "Test User", "email": "test@example.com", "password": "1234", "mobile": "9876543211" }` |
 | `/user/<int:user_id>`      | GET    | Retrieve a user by ID   | N/A                                                        |
 
 ### 💸 Expense Endpoints
 
-| Endpoint                  | Method | Description            | Request Body                                              |
-|---------------------------|--------|------------------------|------------------------------------------------------------|
-| `/expense`                | POST   | Create an expense       | `{ "amount": 100, "split_method": "equal", "participants": [1, 2, 3] }` |
+| Endpoint                             | Method | Description                    | Request Body                                              |
+|--------------------------------------|--------|--------------------------------|------------------------------------------------------------|
+| `/expense`                           | POST   | Add a new expense               | `{ "amount": 500, "split_method": "equal", "user_id": 1, "participants": [2, 3] }` |
+| `/expenses/<int:user_id>`            | GET    | Retrieve expenses for a user    | N/A                                                        |
+| `/balance_sheet/<int:user_id>`       | GET    | Download user's balance sheet   | N/A                                                        |
+
+---
+
+This section now includes both **User** and **Expense** endpoints with their respective routes, methods, and descriptions. Let me know if you'd like any further changes!
 | `/user/<int:user_id>/expenses` | GET    | Get user expenses       | N/A                                                        |
 
 ---
