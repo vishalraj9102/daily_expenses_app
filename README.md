@@ -153,8 +153,7 @@ Here's the updated **API Endpoints** section in your `README.md`, incorporating 
 
 ---
 
-This section now includes both **User** and **Expense** endpoints with their respective routes, methods, and descriptions. Let me know if you'd like any further changes!
-| `/user/<int:user_id>/expenses` | GET    | Get user expenses       | N/A                                                        |
+                                                    |
 
 ---
 
@@ -169,11 +168,11 @@ This section now includes both **User** and **Expense** endpoints with their res
    Content-Type: application/json
 
    {
-       "name": "John Doe",
-       "email": "john@example.com",
-       "mobile": "9876543211",
-       "password": "1234"
+    "email": "Vishu1@example.com",
+    "name": "Test User122",
+    "mobile": "9112078572"
    }
+
    ```
 
 2. **Create an Expense**
