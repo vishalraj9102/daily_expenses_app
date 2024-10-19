@@ -1,5 +1,3 @@
-Here's the updated `README.md` with PostgreSQL as the database and instructions for using **Postman** for API testing. I've also included some icons to make the file look visually appealing.
-
 ---
 
 # 📝 Daily Expenses App
