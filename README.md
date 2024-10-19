@@ -240,4 +240,3 @@ This project is licensed under the MIT License.
 
 ---
 
-This version includes PostgreSQL setup instructions, and the Postman section makes it clear how to test the endpoints. The inclusion of icons makes the `README.md` more visually appealing and structured.
